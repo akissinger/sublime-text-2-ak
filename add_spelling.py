@@ -10,5 +10,8 @@ class AddSpellingCommand(sublime_plugin.TextCommand):
             dicfile = open(dic, 'a')
             dicfile.write(word + '\n')
             dicfile.close()
+            
+            # Sublime doesn't reload dictionaries until it is closed and re-opened, so
+            # ignore the word in the mean time.
             self.view.run_command('ignore_word', {'word': word})
         
