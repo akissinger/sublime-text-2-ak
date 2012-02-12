@@ -1,0 +1,5 @@
+[
+    { "caption": "AK: Word Count", "command": "word_count" },
+    { "caption": "AK: Align LaTeX Matrix", "command": "latex_align_matrix" },
+    { "caption": "AK: Learn Spelling", "command": "add_spelling" }
+]
