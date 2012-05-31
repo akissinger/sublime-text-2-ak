@@ -5,5 +5,6 @@
     { "caption": "AK: make", "command":"build",
          "args":{"file":"Make.sublime-build"}},
     { "caption": "AK: rake", "command":"build",
-         "args":{"file":"Rake.sublime-build"}}
+         "args":{"file":"Rake.sublime-build"}},
+    { "caption": "AK: PySide test", "command": "test_pyside" }
 ]
