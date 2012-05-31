@@ -1,5 +1,9 @@
 [
     { "caption": "AK: Word Count", "command": "word_count" },
     { "caption": "AK: Align LaTeX Matrix", "command": "latex_align_matrix" },
-    { "caption": "AK: Learn Spelling", "command": "add_spelling" }
+    { "caption": "AK: Learn Spelling", "command": "add_spelling" },
+    { "caption": "AK: make", "command":"build",
+         "args":{"file":"Make.sublime-build"}},
+    { "caption": "AK: rake", "command":"build",
+         "args":{"file":"Rake.sublime-build"}}
 ]
