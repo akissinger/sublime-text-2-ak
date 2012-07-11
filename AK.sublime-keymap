@@ -1,0 +1,3 @@
+[
+  { "keys": ["ctrl+shift+L"], "command": "fold_markers" }
+]
