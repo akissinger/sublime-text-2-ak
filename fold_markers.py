@@ -4,16 +4,18 @@ import re
 
 def do_fold(view, start_reg, end_reg, unfold=False):
   if start_reg != None and end_reg != None:
-      after_start = view.full_line(start_reg).end()
-      before_end = view.line(end_reg).begin()-1
-      fold_reg = sublime.Region(after_start,before_end)
-      
-      if unfold:
-        view.unfold(fold_reg)
-      else:
-        view.sel().clear()
-        view.sel().add(sublime.Region(fold_reg.end(),fold_reg.end()))
-        view.fold(fold_reg)
+    after_start = view.full_line(start_reg).end()
+    before_end = view.line(end_reg).begin()-1
+    fold_reg = sublime.Region(after_start,before_end)
+    
+    if unfold:
+      view.unfold(fold_reg)
+    else:
+      view.fold(fold_reg)
+    
+    return fold_reg
+  else:
+    return None
 
 
 class FoldTopMarkersCommand(sublime_plugin.TextCommand):
@@ -67,4 +69,8 @@ class FoldMarkersCommand(sublime_plugin.TextCommand):
       elif len(rstack)>0: rstack.pop()
     
           
-    do_fold(self.view, start_reg, end_reg, unfold)
+    fold_reg = do_fold(self.view, start_reg, end_reg, unfold)
+    
+    if not unfold:
+      self.view.sel().clear()
+      self.view.sel().add(sublime.Region(fold_reg.end(),fold_reg.end()))
