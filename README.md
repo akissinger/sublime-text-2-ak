@@ -14,7 +14,7 @@ For `add_spelling` to work correctly, you need to have a dictionary defined in `
 
     "dictionary": "Packages/Language - English/en_US.dic"
 
-The English/UK dictionary can be downloaded from [here](http://en-gb.pyxidium.co.uk/dictionary/en_GB.zip). For more info on spell checking and dictionaries, see the [Sublime doc](http://www.sublimetext.com/docs/2/spell_checking.html). I have also added the following lines to my `.sublime-keymap` file:
+Have a look at the contents of `Packages/Language - ...` directories to see which dictionaries are available. For more info on spell checking and dictionaries, see the [Sublime doc](http://www.sublimetext.com/docs/2/spell_checking.html). I have also added the following lines to my `.sublime-keymap` file:
 
     [
       { "keys": ["super+shift+m"], "command": "latex_align_matrix" },
