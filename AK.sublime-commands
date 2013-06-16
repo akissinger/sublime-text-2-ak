@@ -2,9 +2,8 @@
     { "caption": "AK: Word Count", "command": "word_count" },
     { "caption": "AK: Align LaTeX Matrix", "command": "latex_align_matrix" },
     { "caption": "AK: Learn Spelling", "command": "add_spelling" },
-    { "caption": "AK: make", "command":"build",
-         "args":{"file":"Make.sublime-build"}},
     { "caption": "AK: rake", "command":"build",
          "args":{"file":"Rake.sublime-build"}},
-    { "caption": "AK: PySide test", "command": "test_pyside" }
+    { "caption": "AK: PySide test", "command": "test_pyside" },
+    { "caption": "AK: Run nearest Makefile", "command": "run_nearest_makefile" }
 ]
